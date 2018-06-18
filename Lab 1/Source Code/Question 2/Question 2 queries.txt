@@ -59,3 +59,37 @@ DELETE from coursera.coursera_details where learner_id = 2;
 
 
 --------------------------HBASE UseCase-------------------------------------------------------------------------
+create 'coursera', 'coursera_details'
+
+
+> put 'coursera', '1', 'coursera_details:learner_Id' ,'1'
+> put 'coursera', '1', 'coursera_details:course_id' , '123'
+> put 'coursera', '1', 'coursera_details:course_name', 'Bigdata'
+> put 'coursera', '1', 'coursera_details:course_duration', '6'
+> put 'coursera', '1', 'coursera_details:tutor_name', 'Jack'
+> put 'coursera', '2', 'coursera_details:learner_Id' ,'2'
+> put 'coursera', '2', 'coursera_details:course_id' , '124'
+> put 'coursera', '2', 'coursera_details:course_name', 'Software Engineering'
+> put 'coursera', '2', 'coursera_details:course_duration', '7'
+> put 'coursera', '2', 'coursera_details:tutor_name', 'Jim'
+
+
+
+
+
+updating 
+
+put 'coursera', '2', 'coursera_details:course_name', 'Sattistical Learning'
+
+
+
+Selecting:
+
+get 'coursera', '1'
+get 'coursera', '2'
+
+
+Deleting:
+
+deleteall 'coursera','1'
+
